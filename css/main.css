@@ -1,0 +1,50 @@
+html {
+  font-family: sans-serif;
+}
+
+.flag-optional {
+  color: #999;
+}
+
+.is-invalidated input:invalid,
+.is-invalidated input[type="checkbox"]:invalid + label::before,
+.is-validated:invalid,
+.is-validated[type="checkbox"]:invalid + label::before, {
+  border-color: #f33;
+}
+
+
+input:invalid,
+input[type="checkbox"]:invalid + label::before {
+  border-color: #f33;
+}
+
+.error-message {
+  display: none;
+  background-color: #fee;
+  color: #c33;
+}
+
+.error-message-highlighted {
+  background-color: #c33;
+  color: #fff;
+}
+
+.is-invalidated > .error-message:first-child,
+.is-invalidated input:invalid + .error-message,
+.is-validated input:invalid + label + .error-message,
+.is-validated:invalid + .error-message,
+.is-validated:invalid + label + .error-message {
+  display: block;
+}
+
+.is-validated:invalid,
+.is-validated[type="checkbox"]:invalid + label::before, {
+  border-color: #f33;
+}
+
+.error-message:first-child,
+input:invalid + .error-message,
+input:invalid + label +.error-message {
+  display: block;
+}
